@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("background.png");
+}
+
+#Container {
+  max-width: 1050px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#Container:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+#Container img {
+  float: left;
+  width: 25%;
+  opacity: 0.65;
+}
+
+#Container img:hover {
+  transition-timing-function: ease-in;
+  transition-duration: 0.2s;
+  opacity: 1;
+}
+
+.thumbnail img {
+  cursor: pointer;
+}
+
+#Main img {
+  max-width: 550px;
+  display: block;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 10px;
+}
+
+@font-face {
+  font-family: "Arnold";
+  src: url('ARNORG__.TTF');
+}
+
+.credit {
+  text-align: center;
+  font-family: "Arnold", Arial;
+}
+
+.credit a {
+  text-decoration: none;
+  color: rgb(204, 81, 144);
+}
+
+.credit a:hover {
+  color: rgb(201, 163, 0);
+}
