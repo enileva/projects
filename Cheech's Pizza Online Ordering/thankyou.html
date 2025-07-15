@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <!-- Name:    Aveline McEntire
+       Date:    9/26/2022
+       Program: Cheech’s Pizza Online Ordering !-->
+  <meta charset="utf-8">
+  <script>
+    function printQuery() {
+      var query = window.location.search.substring(1); // query is in the url at substring 1
+      var vars = query.split("&"); // split up query by ampersands to get cust data
+      var data = []; //placeholder array for data
+      for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split("="); //split var name and var data
+           //document.write(pair[0] + ": " + pair[1] + "<br />");
+           data[i] = pair[1]; //put data into data array
+      }
+      var summary = document.getElementById("OrderSummary"); // this is the div where we place all our order data
+      // now we will create all our paragraph elements and put the data in each respective element. this enables us to style the data
+      var customerName = data[0];
+      var name = document.createElement("p");
+      name.innerHTML = customerName;
+      var customerPhone = data[1];
+      var phone = document.createElement("p");
+      phone.innerHTML = customerPhone;
+      var pizzaAmount = "X " + data[3];
+      var pizzaType = data[2];
+      pizzaType = pizzaType[0].toUpperCase() + pizzaType.substring(1); // for some reason pizzatype comes through all lowercase.. so we make it capitalized
+      var typeAndAmount = document.createElement("p");
+      typeAndAmount.innerHTML = pizzaType + " " + pizzaAmount; // ex: 5 X Hawaiian
+
+
+      var pizzas = parseInt(data[3]); // parse as int to get a number of pizzas to use in calculating price
+      console.log(pizzas);
+      var price = 9.49;
+      var subtotal = 0;
+      var tax = 0.076;
+      var total = 0;
+      for (var i = 0; i < pizzas; i++)
+      {
+          subtotal += price; // add up the price of the pizzas
+      }
+      var taxToAdd = subtotal * tax; // find tax
+      total += subtotal + taxToAdd;
+
+      function formatMoney(number) // this will let us display as currency specifically US dollars
+      {
+        return number.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+      }
+
+      var subtotalChild = document.createElement("p"); // more elements for the order summary div
+      subtotalChild.innerHTML = "Subtotal: " + formatMoney(subtotal);
+      var taxToAddChild = document.createElement("p");
+      taxToAddChild.innerHTML = "Tax: " + formatMoney(taxToAdd);
+      var totalChild = document.createElement("p");
+      totalChild.innerHTML = "Total: " + formatMoney(total);
+
+      summary.appendChild(name); // appending all the elements so they appear
+      summary.appendChild(phone);
+      summary.appendChild(typeAndAmount);
+      summary.appendChild(subtotalChild);
+      summary.appendChild(taxToAddChild);
+      summary.appendChild(totalChild);
+
+      //http://127.0.0.1:3000/thankyou.html?customerName=Aveline&customerPhone=123-456-7890&pizzaType=anchovy&pizzaAmount=5
+    }
+  </script>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css" />
+  <title>Thank You!</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Thank you for requesting an appointment! We will be in touch soon!</h2>
+    <div id="OrderSummary">
+
+    </div>
+    <script>
+      printQuery();
+    </script>
+  </div>
+</body>
+
+</html>
