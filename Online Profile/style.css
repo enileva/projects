@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+  margin: 0
+}
+
+body {
+  background-color: rgb(212, 232, 182);
+  cursor: url('cursor_point1b.cur'), url('cursor_point1b.gif') 0 0, default;
+}
+
+@font-face {
+    font-family: FantasticBoogaloo;
+    src: url(FantasticBoogaloo-GDlq.ttf);
+}
+
+#bottomborder {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 50px;
+  background: url('80x80bh_cloud1a.gif');
+  background-position: bottom;
+  background-repeat: repeat-x;
+}
+
+nav {
+  z-index: 3;
+  position: absolute;
+  top: 40px;
+  left: 15px;
+}
+
+nav ul {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  border: double 3px rgb(167, 147, 17);
+  border-radius: 10px;
+  display: inline-block;
+  list-style: none;
+  background-color: white;
+  padding: 10px;
+}
+
+nav ul img {
+  padding: 7px;
+  padding-bottom: 0;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav a {
+  font-family: FantasticBoogaloo;
+  display: inline;
+  color: rgb(251, 223, 103);
+  text-decoration: none;
+  font-size: 30px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(167, 147, 17);
+}
+
+nav img {
+  margin-top: 5px;
+  transition-duration: 0.4s;
+}
+
+nav img:hover {
+  background-color: rgb(124, 228, 236);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 10px;
+}
+
+
+main h1 {
+  font-size: 30px;
+}
+
+.pagination a {
+  font-size: 25px;
+  text-decoration: none;
+  color: rgb(62, 156, 163);
+  transition-duration: 0.4s;
+}
+
+.pagination a:hover {
+  color: rgb(86, 200, 157);
+}
+
+header {
+  margin-top: 60px;
+  margin-left: 250px;
+  font-family: FantasticBoogaloo;
+  font-size: 50px;
+  font-weight: bold;
+  color: rgb(251, 223, 103);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(167, 147, 17);
+  padding: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-left: dotted white;
+}
+
+main {
+  margin-top: 16px;
+  font-family: FantasticBoogaloo;
+  margin-left: 270px;
+  font-size: 15px;
+  color: rgb(107, 139, 56);
+  width: 50%;
+  background: white;
+  padding: 10px 30px;
+  border: double rgb(167, 147, 17);
+  border-radius: 10px;
+  color: rgb(167, 147, 17);
+}
+main p a {
+  text-decoration: none;
+  color: rgb(62, 156, 163);
+  transition-duration: 0.4s;
+}
+
+main p a:hover {
+  color: rgb(86, 200, 157);
+}
+
+main ul {
+  list-style-image: url('04.gif');
+}
+
+aside {
+  margin-top: 200px;
+  margin-left: 200px;
+  color: white;
+
+}
+
+footer {
+  position: absolute;
+  bottom: 6px;
+  left: 45%;
+  z-index: 2;
+}
+
+footer a {
+  font-family: FantasticBoogaloo;
+  text-decoration: none;
+  color: rgb(157, 99, 0);
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Aveline McEntire</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css">
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <!-- Cursor and background graphics made by Whimsical whom can be found at http://whimsical.heartette.net -->
+    <style>
+      * {
+      cursor: url('cursor_point1b.cur'), url('cursor_point1b.gif') 0 0, default;
+      }
+    </style>
+    <style>
+      body {
+      background: url('80x80th_lacebow1b.gif');
+      background-position: top;
+      background-repeat: repeat-x;
+      }
+    </style>
+    <!-- Nav icons done by Lejla appledust whom can be found at https://www.lejlart.com/apple.html -->
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html"><img src="lacroixdaisy.gif" alt="home icon"><div class="">home</div></a></li>
+        <li><a href="about1.html"><img src="lacroixtulip.gif" alt="about icon"><div class="">about</div></a></li>
+        <li><a href="my_work1.html"><img src="lacroixhydrangea.gif" alt="my work icon"><div class="">my work</div></a></li>
+        <li><a href="contact.html"><img src="lacroixsunflower.gif" alt="contact icon"><div class="">contact</div></a></li>
+      </ul>
+    </nav>
+    <header>
+      my work in python
+    </header>
+    <main>
+      <h1>Fortune Cookie</h1>
+      <br>
+      <py-script>import random
+print("Welcome to the Fortune Cookie program.")
+input("Press enter to receive your fortune. ")
+fortuneNumber = random.randint(1,5)
+if fortuneNumber == 1:
+  print("A beautiful, smart, and loving person will be coming into your life.")
+elif fortuneNumber == 2:
+  print("Chance favors those in motion.")
+elif fortuneNumber == 3:
+  print("In order to take, one must first give.")
+elif fortuneNumber == 4:
+  print("Like the river flows into the sea. Some things are just meant to be.")
+elif fortuneNumber == 5:
+  print("The best prediction of future is the past.")</py-script>
+    <br>
+    <img src="03.gif" alt="Butterfly line border">
+    <br>
+    <br>
+    <h1>Guess Your Number</h1>
+    <br>
+    <py-script>import random
+print("Greetings User. I will attempt to guess YOUR number today.")
+input("Please think of a number between 1 and 100 and press enter when you have thought of it (but don't type it... it's a GUESSING game).\nType 'higher' if the number is actually higher, 'lower' if the number is actually lower, and 'correct' if the number is correct.")
+low = 1
+high = 100
+guess = random.randint(low, high)
+response = input("Is this your number? " + str(guess) + "\n")
+while response != "correct":
+  if response == "higher":
+    low = guess + 1
+    guess = random.randint(low, high)
+    response = input("Is this your number? " + str(guess) + "\n")
+  elif response == "lower":
+    high = guess - 1
+    guess = random.randint(low, guess)
+    response = input("Is this your number? " + str(guess) + "\n")
+  else:
+    response = input("Please only input 'higher', 'lower', or 'correct'. \n")
+
+print("Awesome, so the number was " + str(guess) + "!")</py-script>
+      <div class="pagination">
+        <a href="my_work2.html">&laquo;</a>
+        <a href="my_work1.html">1</a>
+        <a href="my_work2.html">2</a>
+        <a href="my_work3.html">3</a>
+        <a href="#">&raquo;</a>
+      </div>
+    </main>
+    <br>
+    <aside>
+
+    </aside>
+    <footer><a href="#">&copy; Aveline McEntire 2022</a></footer>
+    <div id="bottomborder">.</div>
+  </body>
+</html>
