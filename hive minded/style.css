@@ -1,0 +1,161 @@
+body {
+  background-color: rgba(237, 200, 102, 0.61);
+}
+
+header nav {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+  text-align: center;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+}
+
+header nav ul li {
+  display: inline-block;
+}
+
+header nav ul li a {
+  color: #FFFFFF;
+  text-decoration: none;
+  display: block;
+  font-size: 22px;
+  padding: 10px 15px;
+  border-radius: 3px;
+  transition: 0.3s ease all;
+}
+
+nav{
+    background-color: #03a6c3;
+}
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+}
+nav ul li{
+    display: inline-block;
+    background-color: #03a6c3;
+}
+nav a{
+    display: block;
+    padding: 0 10px;
+    color: #fff;
+    line-height: 60px;
+    font-size: 20px;
+    text-decoration: none;
+}
+/* Hide Dropdown by Default*/
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 60px;
+}
+/* hover */
+nav a:hover{
+    background-color: #000000;
+}
+/* Display Dropdown on Hover */
+nav ul li:hover > ul {
+    display: inherit;
+}
+/* Fisrt Tier Dropdown */
+nav ul ul li{
+    width: 170px;
+    float: none;
+    display: list-item;
+    position: relative;
+
+}
+
+/* ============ Second, Third and More Tiers ===========*/
+nav ul ul ul li {
+    position: relative;
+    top: -60px;
+    left: 170px;
+}
+
+/* Change this in order to change the Dropdown symbol */
+li > a::after { content: ' +';}
+li > a:only-child::after {
+    content: '';
+}
+
+
+div.logo {
+  padding: 0px;
+  margin: 0px;
+}
+
+div.logo img {
+  max-width: 175px;
+
+}
+
+div.banner {
+  background-color: #99D6EA;
+  padding: 15px;
+}
+
+div.banner h1 {
+  font-family: Georgia;
+  font-size: 45px;
+  letter-spacing: 2px;
+}
+
+.activism {
+
+}
+
+div.site-nav-dropdown {
+
+}
+
+div.Meet {
+  background-color: rgb(235, 205, 76);
+  padding: 20px;
+}
+
+div.Meet h1 {
+  font-family: 'Brush Script MT';
+  letter-spacing: 0.25em;
+}
+
+#Mission img {
+  display: block;
+  max-width: 30%;
+  padding: 20px;
+  border: 13px outset #99D6EA;
+  background-color: #82c0f4;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#Mission p {
+  font-size: 30px;
+}
+
+#Mission h1 {
+  font-size: 50px;
+  font-family: Garamond;
+  padding-left: 15px;
+}
+
+.box {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.box img {
+  max-width: 300px;
+  max-height: 300px;
+  border: 3px dashed white;
+}

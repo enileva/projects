@@ -1,0 +1,226 @@
+body {
+  background-color: rgba(237, 200, 102, 0.61);
+}
+
+header nav {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+  text-align: center;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+}
+
+header nav ul li {
+  display: inline-block;
+}
+
+header nav ul li a {
+  color: #FFFFFF;
+  text-decoration: none;
+  display: block;
+  font-size: 22px;
+  padding: 10px 15px;
+  border-radius: 3px;
+  transition: 0.3s ease all;
+}
+
+nav{
+    background-color: #03a6c3;
+}
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+}
+nav ul li{
+    display: inline-block;
+    background-color: #03a6c3;
+}
+nav a{
+    display: block;
+    padding: 0 10px;
+    color: #fff;
+    line-height: 60px;
+    font-size: 20px;
+    text-decoration: none;
+}
+/* Hide Dropdown by Default*/
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 60px;
+}
+/* hover */
+nav a:hover{
+    background-color: #000000;
+}
+/* Display Dropdown on Hover */
+nav ul li:hover > ul {
+    display: inherit;
+}
+/* Fisrt Tier Dropdown */
+nav ul ul li{
+    width: 170px;
+    float: none;
+    display: list-item;
+    position: relative;
+
+}
+
+/* ============ Second, Third and More Tiers ===========*/
+nav ul ul ul li {
+    position: relative;
+    top: -60px;
+    left: 170px;
+}
+
+/* Change this in order to change the Dropdown symbol */
+li > a::after { content: ' +';}
+li > a:only-child::after {
+    content: '';
+}
+
+div.logo {
+  padding: 0px;
+  margin: 0px;
+}
+
+div.logo img {
+  max-width: 175px;
+
+}
+
+div.banner {
+  background-color: #99D6EA;
+  padding: 15px;
+}
+
+div.banner h1 {
+  font-family: 'Lobster', cursive;
+  color: black;
+  font-size: 45px;
+  letter-spacing: 2px;
+}
+
+.activism {
+
+}
+
+div.site-nav-dropdown {
+
+}
+
+div.Meet {
+  background-color: rgb(235, 205, 76);
+  padding: 20px;
+}
+
+div.Meet h1 {
+  font-family: 'Brush Script MT';
+}
+
+
+section.description {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  background-color: rgb(238, 203, 47);
+  border-radius: 5px;
+}
+
+section.description p {
+  font-size: 25px;
+  letter-spacing: 2px;
+  font-family: Georgia;
+  color: black;
+  text-align: right;
+  padding: 20px;
+}
+
+#Mission img {
+  max-width: 30%;
+  padding: 20px;
+  border: 13px outset #99D6EA;
+  background-color: #82c0f4;
+}
+
+.box {
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-start;
+  max-width: 100%;
+}
+
+.box img {
+  max-width: 350px;
+  min-width: 300px;
+  max-height: 300px;
+  min-height: 300px;
+  border: 3px dashed white;
+  padding: 10px;
+}
+
+aside {
+  float: right;
+  background-color: green;
+  padding: 20px;
+  margin-right: 50px;
+  color: white;
+  border-radius: 10px;
+  max-width: 600px;
+  display:inline-block;
+  width:100%;
+  vertical-align:top;
+  position: relative;
+  line-height: 1.5em;
+}
+
+
+aside h2::before {
+  content: open-quote;
+  font-weight: bold;
+  font-size: 2em;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+aside h2::after {
+  content: close-quote;
+  font-weight: bold;
+  font-size: 2em;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.store h1 {
+  font-family: 'Josefin Sans', sans-serif;
+
+  color: white;
+  max-width: 30%;
+}
+.beekeepers {
+  flex-wrap: nowrap;
+}
+.beekeepers img {
+  max-width: 50%;
+  padding: 20px;
+}
+
+.beekeepers aside {
+  max width: 30%
+  position: fixed;
+}
+
+iframe {
+  position: relative;
+  width: 80%;
+  height: 300px;
+  margin-left: 15%;
+  border: none;
+}
