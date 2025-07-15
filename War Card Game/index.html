@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>War Card Game</title>
+    <link rel="shortcut icon" href="card.ico" type="image/x-icon">
+    <link rel="icon" href="card.ico" type="image/x-icon">
+  </head>
+  <body>
+    <img src="cards/red_joker.png" id="card1" height="200" alt="Player 1">
+    <img src="cards/red_joker.png" id="card2" height="200" alt="Player 2">
+    <h1 id="winner">Play War!!</h1>
+    <script>
+      aryClubs = ["2_of_clubs.png","3_of_clubs.png","4_of_clubs.png","5_of_clubs.png","6_of_clubs.png","7_of_clubs.png","8_of_clubs.png","9_of_clubs.png","10_of_clubs.png","ace_of_clubs.png","jack_of_clubs.png","queen_of_clubs.png","king_of_clubs.png"]
+      aryDiamonds = ["2_of_diamonds.png","3_of_diamonds.png","4_of_diamonds.png","5_of_diamonds.png","6_of_diamonds.png","7_of_diamonds.png","8_of_diamonds.png","9_of_diamonds.png","10_of_diamonds.png","ace_of_diamonds.png","jack_of_diamonds.png","queen_of_diamonds.png","king_of_diamonds.png"]
+      aryHearts = ["2_of_hearts.png","3_of_hearts.png","4_of_hearts.png","5_of_hearts.png","6_of_hearts.png","7_of_hearts.png","8_of_hearts.png","9_of_hearts.png","10_of_hearts.png","ace_of_hearts.png","jack_of_hearts.png","queen_of_hearts.png","king_of_hearts.png"]
+      arySpades = ["2_of_spades.png","3_of_spades.png","4_of_spades.png","5_of_spades.png","6_of_spades.png","7_of_spades.png","8_of_spades.png","9_of_spades.png","10_of_spades.png","ace_of_spades.png","jack_of_spades.png","queen_of_spades.png","king_of_spades.png"]
+    var playAgain = "yes"
+    while (playAgain == "yes")
+    {
+          // randomly select 'suit' an array
+          var suit1 = Math.ceil(Math.random() * 4)
+          var card1 = Math.floor(Math.random() * 13)
+
+          var cardSelected1 // save which card was selected
+
+          //if block which will choose based on the random number which
+          // array to use (suit)
+          if (suit1 == 1)
+          {
+
+            //use aryClubs or clubs was chosen
+            cardSelected1 = aryClubs[card1]
+            //document.getElementById('card1').src = "cards/" + aryClubs[card1]
+          }  else if (suit1 == "2")
+          {
+
+            //use aryDiamonds or diamonds was chosen
+            cardSelected1 = aryDiamonds[card1]
+            //document.getElementById('card1').src = "cards/" + aryDiamonds[card1]
+          } else if (suit1 == "3")
+          {
+
+            // use aryHearts or hearts was chosen
+            cardSelected1 = aryHearts[card1]
+            //document.getElementById('card1').src = "cards/" + aryHearts[card1]
+          } else {
+
+            //use arySpades or spades was chosen
+            cardSelected1 = arySpades[card1]
+            //document.getElementById('card1').src = "cards/" + arySpades[card1]
+          }
+
+          document.getElementById("card1").src = "cards/" + cardSelected1
+
+          // card for second player
+          // randomly select 'suit' an array
+          var suit1 = Math.ceil(Math.random() * 4)
+          var card2 = Math.floor(Math.random() * 13)
+
+          var cardSelected1 // save which card was selected
+
+          //if block which will choose based on the random number which
+          // array to use (suit)
+          if (suit1 == 1)
+          {
+
+            //use aryClubs or clubs was chosen
+            cardSelected1 = aryClubs[card2]
+            //document.getElementById('card1').src = "cards/" + aryClubs[card1]
+          }  else if (suit1 == "2")
+          {
+
+            //use aryDiamonds or diamonds was chosen
+            cardSelected1 = aryDiamonds[card2]
+            //document.getElementById('card1').src = "cards/" + aryDiamonds[card1]
+          } else if (suit1 == "3")
+          {
+
+            // use aryHearts or hearts was chosen
+            cardSelected1 = aryHearts[card2]
+            //document.getElementById('card1').src = "cards/" + aryHearts[card1]
+          } else {
+
+            //use arySpades or spades was chosen
+            cardSelected1 = arySpades[card2]
+            //document.getElementById('card1').src = "cards/" + arySpades[card1]
+          }
+
+          document.getElementById("card2").src = "cards/" + cardSelected1
+          var winner
+          if (card1 > card2)
+          {
+            winner = "Player 1 wins"
+          } else if (card1 < card2)
+          {
+            winner = "Player 2 wins"
+          } else {
+            winner = "It's a tie"
+          }
+          document.getElementById("winner").innerHTML = winner
+          playAgain = prompt("Play Again?")
+
+    }
+
+      document.getElementById("winner").innerHTML = "Thank you for playing!"
+    </script>
+  </body>
+</html>
