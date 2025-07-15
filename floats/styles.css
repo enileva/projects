@@ -1,0 +1,47 @@
+img.left {
+  float: left;
+  width: 15%;
+  height: 15%;
+  border-style: inset;
+  margin-right: 16px;
+  box-shadow: 0 0 10px aliceblue;
+  border-radius: 6px;
+}
+
+img.right {
+  float: right;
+  width: 15%;
+  height: 15%;
+  border-style: inset;
+  margin-left: 16px;
+  box-shadow: 0 0 10px aliceblue;
+  border-radius: 6px;
+}
+
+h2 {
+  font-size: 20px;
+  color: white;
+  font-family: 'Lucida Console';
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-family: Garamond;
+  width: 200px;
+  margin: auto;
+  text-decoration: underline;
+  color: white;
+  text-shadow: 0 0 5px aliceblue;
+}
+
+section.section1 {
+  padding: 15px 30px;
+}
+
+section.section2 {
+  padding: 0px 30px;
+}
+
+body {
+  background-color: black;
+}
