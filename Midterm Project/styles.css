@@ -1,0 +1,67 @@
+@font-face {
+    font-family: titleFont;
+    src: url(fonts/MoskitoesShadowPersonalUseRegular-6Yr0q.ttf);
+}
+
+@font-face {
+
+  font-family: subtitleFont;
+  src: url(fonts/WhoaSaucePersonalUseBold-mLmV5.ttf);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  border: 0; }
+
+#BoardContainer {
+  background-color: rgb(218, 247, 255);
+  box-sizing: border-box;
+  position: relative;
+  margin: auto;
+  float: left;
+  border: 6px outset rgb(32, 133, 215);
+  overflow: hidden !important;
+}
+
+h1 {
+  padding-left: 25px;
+  font-size: 70px;
+  margin-top: 10px;
+  color: rgb(44, 81, 108);
+  font-family: titleFont;
+}
+
+.space {
+  height: 80px;
+  width: 80px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+}
+
+#ButtonContainer {
+  background-color: rgb(108, 180, 221);
+  border: 6px outset rgb(139, 234, 255);
+}
+
+.button p {
+  padding-top: 0;
+  padding-left: 10px;
+  padding-bottom: 73px;
+  line-height: 3.5;
+  font-size: 35px;
+  display: inline-block;
+  vertical-align: middle;
+  font-family: subtitleFont;
+  font-weight: bolder;
+  color: #fff;
+}
+
+.button img {
+  margin: 10px;
+  height: 70px;
+  width: 70px;
+  border-radius: 75px;
+}
